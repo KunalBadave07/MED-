@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="result-body">
+    <div class="container mt-5">
+        <div class="report-container">
+            <div class="report-header">
+                🏥 Medical Diagnosis Report 🏥
+            </div>
+            <div class="report-content">
+                <p><strong>Selected Symptoms:</strong></p>
+                <ul>
+                    {% for symptom in result.symptoms %}
+                        <li>{{ symptom }}</li>
+                    {% endfor %}
+                </ul>
+                <p><strong>Predicted Disease🩺:</strong> {{ result.disease }}</p>
+                <p><strong>Confidence Level:</strong> {{ result.probability }}%</p>
+                <p><strong>Recommended Home Remedies 💊:</strong> {{ result.remedy }}</p>
+                <p><strong>Doctor's Suggestion 🧑‍⚕️:</strong>
+                    <a href="{{ url_for('show_doctors', specialization=result.doctor|lower|replace(' ', '') ) }}" class="btn btn-info">
+                        {{ result.doctor }}
+                    </a>
+                </p>
+            </div>
+        </div>
+        <p>Medicine can heal the body, but <strong>love, faith, and resilience heal the soul.</strong> No matter what lies ahead, know that you are strong!</p>
+        <button onclick="history.back()" class="btn btn-secondary">Back</button>
+    </div>
+</body>
+</html>

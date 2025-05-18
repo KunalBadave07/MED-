@@ -1,0 +1,161 @@
+Hospital Name,Doctor Name,Specialization,Contact Number,Area,City,OPD Timings,Rating,Beds Available
+Ruby Hall Clinic,Dr. Anjali Deshmukh,Cardiologist,9823012345,Baner,Pune,9 AM - 2 PM,4.7,56
+Aditya Birla Hospital,Dr. Rajesh Patil,Orthopedic Surgeon,9765432100,Pimpri,Pimpri-Chinchwad,10 AM - 3 PM,4.5,60
+Sahyadri Hospital,Dr. Kavita Joshi,Pediatrician,9856123456,Aundh,Pune,8 AM - 1 PM,4.6,48
+Manipal Hospital,Dr. Amol Kale,Neurologist,9923456781,Nigdi,Pimpri-Chinchwad,11 AM - 4 PM,4.3,70
+Jehangir Hospital,Dr. Sneha Pawar,Gynecologist,9876543210,Kharadi,Pune,10 AM - 2 PM,4.8,52
+Noble Hospital,Dr. Sandeep Kulkarni,Dermatologist,9812345678,Hadapsar,Pune,9 AM - 1 PM,4.2,40
+Deenanath Mangeshkar Hospital,Dr. Neha Rane,ENT Specialist,9834567890,Karve Road,Pune,8 AM - 12 PM,4.4,35
+Columbia Asia Hospital,Dr. Vikram Thakur,Urologist,9845123789,Ravet,Pimpri-Chinchwad,10 AM - 3 PM,4.5,60
+Inamdar Hospital,Dr. Priya Dixit,Oncologist,9801234567,Bhosari,Pimpri-Chinchwad,9 AM - 2 PM,4.6,58
+Lokmanya Hospital,Dr. Ashok Shinde,General Physician,9823764512,Sinhagad Road,Pune,8 AM - 12 PM,4.1,50
+Ruby Hall Clinic,Dr. Meera Bhide,Cardiologist,9827654321,Erandwane,Pune,10 AM - 2 PM,4.7,62
+Aditya Birla Hospital,Dr. Sanjay Jagtap,Orthopedic Surgeon,9876123450,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.6,44
+Sahyadri Hospital,Dr. Rutuja Naik,Pediatrician,9765012345,Bund Garden,Pune,11 AM - 4 PM,4.3,38
+Manipal Hospital,Dr. Nitin More,Neurologist,9820987654,Thergaon,Pimpri-Chinchwad,10 AM - 3 PM,4.4,72
+Jehangir Hospital,Dr. Anuja Mehta,Gynecologist,9843098765,Akurdi,Pimpri-Chinchwad,9 AM - 2 PM,4.5,49
+Noble Hospital,Dr. Mahesh Pawaskar,Dermatologist,9798012345,Hadapsar,Pune,8 AM - 12 PM,4.3,41
+Deenanath Mangeshkar Hospital,Dr. Reema Gokhale,ENT Specialist,9832456781,Karve Road,Pune,9 AM - 1 PM,4.2,36
+Columbia Asia Hospital,Dr. Tushar Vaidya,Urologist,9811223344,Chikhali,Pimpri-Chinchwad,11 AM - 4 PM,4.4,55
+Inamdar Hospital,Dr. Sheetal Chavan,Oncologist,9856123488,Dapodi,Pimpri-Chinchwad,10 AM - 3 PM,4.7,47
+Lokmanya Hospital,Dr. Kiran Salunkhe,General Physician,9823345671,Baner,Pune,9 AM - 2 PM,4.1,42
+Ruby Hall Clinic,Dr. Vaibhav Gokhale,Cardiologist,9825678901,Shivaji Nagar,Pune,8 AM - 12 PM,4.6,63
+Aditya Birla Hospital,Dr. Ramesh Deshpande,Orthopedic Surgeon,9798123456,Wakad,Pimpri-Chinchwad,9 AM - 2 PM,4.4,50
+Sahyadri Hospital,Dr. Swati Patil,Pediatrician,9898765432,Pashan,Pune,10 AM - 3 PM,4.5,65
+Manipal Hospital,Dr. Umesh Ghorpade,Neurologist,9911223344,Pimple Saudagar,Pimpri-Chinchwad,11 AM - 4 PM,4.3,58
+Jehangir Hospital,Dr. Neelam Bhagat,Gynecologist,9854321098,Camp,Pune,8 AM - 1 PM,4.7,55
+Noble Hospital,Dr. Vaishali Chawla,Dermatologist,9776543210,Chinchwad,Pimpri-Chinchwad,9 AM - 2 PM,4.5,46
+Deenanath Mangeshkar Hospital,Dr. Shubham Bhosale,ENT Specialist,9865432109,Prabhat Road,Pune,10 AM - 3 PM,4.8,49
+Columbia Asia Hospital,Dr. Kiran Desai,Urologist,9832109876,Bopodi,Pune,8 AM - 1 PM,4.6,61
+Inamdar Hospital,Dr. Anjali Patil,Oncologist,9912334455,Kasarwadi,Pimpri-Chinchwad,9 AM - 1 PM,4.3,53
+Lokmanya Hospital,Dr. Vishal Pandey,General Physician,9845671230,Alandi,Pimpri-Chinchwad,11 AM - 3 PM,4.4,59
+Ruby Hall Clinic,Dr. Shashikant Dubey,Cardiologist,9812345670,Shivajinagar,Pune,9 AM - 2 PM,4.7,60
+Aditya Birla Hospital,Dr. Nitin Sonawane,Orthopedic Surgeon,9837612345,Sus,Pune,10 AM - 3 PM,4.5,48
+Sahyadri Hospital,Dr. Rupa Tiwari,Pediatrician,9867876543,Hadapsar,Pune,8 AM - 1 PM,4.6,62
+Manipal Hospital,Dr. Sushil Patil,Neurologist,9821456789,Chinchwad,Pimpri-Chinchwad,9 AM - 2 PM,4.4,64
+Jehangir Hospital,Dr. Pranjal Shinde,Gynecologist,9801345678,Sadashiv Peth,Pune,10 AM - 3 PM,4.5,50
+Noble Hospital,Dr. Rakesh Gupta,Dermatologist,9876123498,Aundh,Pune,11 AM - 4 PM,4.2,47
+Deenanath Mangeshkar Hospital,Dr. Sumit Malhotra,ENT Specialist,9798456321,Shivaji Nagar,Pune,9 AM - 1 PM,4.3,55
+Columbia Asia Hospital,Dr. Priya Kulkarni,Urologist,9856078901,Pimpri,Pimpri-Chinchwad,10 AM - 3 PM,4.4,56
+Inamdar Hospital,Dr. Kunal Deshmukh,Oncologist,9823098765,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.6,60
+Lokmanya Hospital,Dr. Rekha Gaikwad,General Physician,9807654321,Baner,Pune,8 AM - 12 PM,4.3,54
+Ruby Hall Clinic,Dr. Radhika Verma,Cardiologist,9887665544,Kothrud,Pune,9 AM - 2 PM,4.7,70
+Aditya Birla Hospital,Dr. Manish More,Orthopedic Surgeon,9773432123,Wakad,Pimpri-Chinchwad,10 AM - 3 PM,4.6,55
+Sahyadri Hospital,Dr. Vikram Bansal,Pediatrician,9810224567,Mundhwa,Pune,11 AM - 4 PM,4.4,68
+Manipal Hospital,Dr. Megha Sharma,Neurologist,9922334455,Chinchwad,Pimpri-Chinchwad,8 AM - 1 PM,4.3,62
+Jehangir Hospital,Dr. Anjali Jadhav,Gynecologist,9765543210,Pune Camp,Pune,9 AM - 1 PM,4.5,50
+Noble Hospital,Dr. Ankur Khatri,Dermatologist,9890345678,Chinchwad,Pimpri-Chinchwad,10 AM - 3 PM,4.4,55
+Deenanath Mangeshkar Hospital,Dr. Kiran Phadke,ENT Specialist,9823123456,Karve Nagar,Pune,8 AM - 1 PM,4.6,60
+Columbia Asia Hospital,Dr. Shruti Deshmukh,Urologist,9856123789,Kharadi,Pune,9 AM - 2 PM,4.7,63
+Inamdar Hospital,Dr. Vikas Patil,Oncologist,9812233445,Shivaji Nagar,Pune,10 AM - 3 PM,4.3,57
+Lokmanya Hospital,Dr. Sandeep Nair,General Physician,9823012345,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.6,64
+Ruby Hall Clinic,Dr. Meenal Shetty,Cardiologist,9773245678,Camp,Pune,10 AM - 3 PM,4.5,66
+Aditya Birla Hospital,Dr. Kiran Joshi,Orthopedic Surgeon,9867456789,Pimpri,Pimpri-Chinchwad,9 AM - 2 PM,4.4,59
+Sahyadri Hospital,Dr. Sheetal Naik,Pediatrician,9810112233,Aundh,Pune,8 AM - 1 PM,4.5,61
+Manipal Hospital,Dr. Gajendra Yadav,Neurologist,9888887777,Moshi,Pimpri-Chinchwad,10 AM - 3 PM,4.3,54
+Jehangir Hospital,Dr. Sunita Gupta,Gynecologist,9891234567,Pune,Pune,8 AM - 12 PM,4.7,58
+Noble Hospital,Dr. Raghav Desai,Dermatologist,9812345678,Sus,Pune,9 AM - 1 PM,4.2,50
+Deenanath Mangeshkar Hospital,Dr. Sandeep Sharma,ENT Specialist,9802345678,Magarpatta City,Pune,9 AM - 2 PM,4.6,66
+Columbia Asia Hospital,Dr. Lata Joshi,Urologist,9911223344,Chinchwad,Pimpri-Chinchwad,11 AM - 3 PM,4.5,60
+Inamdar Hospital,Dr. Pradeep Sharma,Oncologist,9865432100,Pashan,Pune,10 AM - 1 PM,4.3,62
+Lokmanya Hospital,Dr. Sharad Gaikwad,General Physician,9812345670,Kharadi,Pune,9 AM - 2 PM,4.4,58
+Ruby Hall Clinic,Dr. Ravi Mishra,Cardiologist,9876541230,Pune Camp,Pune,10 AM - 3 PM,4.6,75
+Aditya Birla Hospital,Dr. Neelam Patel,Orthopedic Surgeon,9822333445,MIDC,Pimpri-Chinchwad,9 AM - 2 PM,4.5,68
+Sahyadri Hospital,Dr. Arvind Joshi,Pediatrician,9798887743,Aundh,Pune,9 AM - 12 PM,4.7,70
+Manipal Hospital,Dr. Sudhir Rao,Neurologist,9445533221,Pimpri,Pimpri-Chinchwad,10 AM - 2 PM,4.6,65
+Jehangir Hospital,Dr. Pooja Desai,Gynecologist,9867563344,Sangamwadi,Pune,8 AM - 1 PM,4.4,60
+Noble Hospital,Dr. Kamal Khare,Dermatologist,9222334455,Chinchwad,Pimpri-Chinchwad,9 AM - 3 PM,4.6,62
+Deenanath Mangeshkar Hospital,Dr. Ramesh Patil,ENT Specialist,9812233443,Kothrud,Pune,10 AM - 2 PM,4.5,64
+Columbia Asia Hospital,Dr. Rajesh Patil,Urologist,9834567890,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.4,67
+Inamdar Hospital,Dr. Sheetal Jadhav,Oncologist,9444556677,Mundhwa,Pune,9 AM - 3 PM,4.7,60
+Lokmanya Hospital,Dr. Priya Bansal,General Physician,9776543210,Wakad,Pimpri-Chinchwad,10 AM - 2 PM,4.3,55
+Ruby Hall Clinic,Dr. Anupama Singh,Cardiologist,9912334455,Camp,Pune,9 AM - 1 PM,4.5,72
+Aditya Birla Hospital,Dr. Rajesh Bansal,Orthopedic Surgeon,9776543221,Moshi,Pimpri-Chinchwad,9 AM - 1 PM,4.4,68
+Sahyadri Hospital,Dr. Rani Joshi,Pediatrician,9887654332,Hadapsar,Pune,8 AM - 2 PM,4.6,74
+Manipal Hospital,Dr. Vinod Naik,Neurologist,9888777666,Pimpri,Pimpri-Chinchwad,10 AM - 3 PM,4.7,62
+Jehangir Hospital,Dr. Richa Gupta,Gynecologist,9865432101,Shivaji Nagar,Pune,9 AM - 1 PM,4.5,59
+Noble Hospital,Dr. Rohit Pawar,Dermatologist,9890998877,Chinchwad,Pimpri-Chinchwad,8 AM - 2 PM,4.6,61
+Deenanath Mangeshkar Hospital,Dr. Nisha Arora,ENT Specialist,9812349876,Karve Nagar,Pune,10 AM - 2 PM,4.4,69
+Columbia Asia Hospital,Dr. Kamini Joshi,Urologist,9844672389,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.5,64
+Inamdar Hospital,Dr. Raghavendra,Oncologist,9922113344,Pune Camp,Pune,8 AM - 1 PM,4.7,70
+Lokmanya Hospital,Dr. Sonali Yadav,General Physician,9876543211,Pune,Pune,9 AM - 2 PM,4.3,56
+Ruby Hall Clinic,Dr. Sandeep Jain,Nephrologist,9888776655,Camp,Pune,9 AM - 1 PM,4.6,72
+Aditya Birla Hospital,Dr. Nidhi Verma,Plastic Surgeon,9822333448,MIDC,Pimpri-Chinchwad,10 AM - 2 PM,4.4,65
+Sahyadri Hospital,Dr. Gaurav Shetty,Cardiologist,9798887764,Aundh,Pune,9 AM - 12 PM,4.7,70
+Manipal Hospital,Dr. Priya Kapoor,Orthopedic Surgeon,9445533322,Pimpri,Pimpri-Chinchwad,10 AM - 2 PM,4.5,64
+Jehangir Hospital,Dr. Tanya Shah,General Surgeon,9867563348,Sangamwadi,Pune,8 AM - 1 PM,4.4,62
+Noble Hospital,Dr. Neelam Joshi,Endocrinologist,9222334456,Chinchwad,Pimpri-Chinchwad,9 AM - 3 PM,4.5,68
+Deenanath Mangeshkar Hospital,Dr. Kunal Deshmukh,Psychiatrist,9812233453,Kothrud,Pune,10 AM - 2 PM,4.6,66
+Columbia Asia Hospital,Dr. Sanjay Agarwal,Neurologist,9834567891,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.7,71
+Inamdar Hospital,Dr. Sheetal Shah,Gastroenterologist,9444556678,Mundhwa,Pune,9 AM - 3 PM,4.6,70
+Lokmanya Hospital,Dr. Aman Yadav,Rheumatologist,9776543222,Wakad,Pimpri-Chinchwad,10 AM - 2 PM,4.3,60
+Ruby Hall Clinic,Dr. Pritam Kumar,Orthopedic Surgeon,9912334456,Camp,Pune,9 AM - 1 PM,4.5,75
+Aditya Birla Hospital,Dr. Rajeev Soni,Neuro Surgeon,9776543213,Moshi,Pimpri-Chinchwad,9 AM - 1 PM,4.6,62
+Sahyadri Hospital,Dr. Aarti Patel,Pediatric Cardiologist,9887654333,Hadapsar,Pune,8 AM - 2 PM,4.7,69
+Manipal Hospital,Dr. Vikram Agarwal,Plastic Surgeon,9888777667,Pimpri,Pimpri-Chinchwad,10 AM - 3 PM,4.4,65
+Jehangir Hospital,Dr. Pranjal Gupta,Nephrologist,9865432102,Shivaji Nagar,Pune,9 AM - 1 PM,4.6,64
+Noble Hospital,Dr. Rishika Jain,Cardiologist,9890998878,Chinchwad,Pimpri-Chinchwad,8 AM - 2 PM,4.7,68
+Deenanath Mangeshkar Hospital,Dr. Shruti Agarwal,Orthopedic Surgeon,9812349877,Karve Nagar,Pune,10 AM - 2 PM,4.5,66
+Columbia Asia Hospital,Dr. Neelam Rathi,Endocrinologist,9844672390,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.4,70
+Inamdar Hospital,Dr. Anil Dube,Oncologist,9922113355,Pune Camp,Pune,8 AM - 1 PM,4.7,73
+Lokmanya Hospital,Dr. Shruti Yadav,Psychiatrist,9876543220,Pune,Pune,9 AM - 2 PM,4.5,59
+Ruby Hall Clinic,Dr. Anjali Mehta,Urologist,9812345567,Shivaji Nagar,Pune,9 AM - 2 PM,4.6,70
+Aditya Birla Hospital,Dr. Rakesh Kumar,Orthopedic Surgeon,9898776655,MIDC,Pimpri-Chinchwad,10 AM - 3 PM,4.4,64
+Sahyadri Hospital,Dr. Tanvi Deshmukh,Obstetrician,9888887766,Aundh,Pune,8 AM - 12 PM,4.7,72
+Manipal Hospital,Dr. Subodh Shinde,Cardiologist,9855443322,Pimpri,Pimpri-Chinchwad,9 AM - 1 PM,4.5,65
+Jehangir Hospital,Dr. Priya Joshi,Neurologist,9866655443,Sangamwadi,Pune,10 AM - 2 PM,4.6,68
+Noble Hospital,Dr. Harshad More,General Surgeon,9922334455,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.4,66
+Deenanath Mangeshkar Hospital,Dr. Neha Kulkarni,Pediatrician,9812345678,Kothrud,Pune,8 AM - 1 PM,4.6,69
+Columbia Asia Hospital,Dr. Nitin Kumar,Physiotherapist,9856347788,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.7,73
+Inamdar Hospital,Dr. Shweta Agarwal,Pulmonologist,9812334456,Mundhwa,Pune,9 AM - 2 PM,4.5,67
+Lokmanya Hospital,Dr. Dinesh Patel,Pediatric Cardiologist,9887654333,Wakad,Pimpri-Chinchwad,10 AM - 2 PM,4.3,64
+Ruby Hall Clinic,Dr. Umesh Patel,Orthopedic Surgeon,9888776655,Camp,Pune,9 AM - 1 PM,4.6,71
+Aditya Birla Hospital,Dr. Kavita Agarwal,Nephrologist,9865432211,Moshi,Pimpri-Chinchwad,9 AM - 1 PM,4.5,65
+Sahyadri Hospital,Dr. Meenal Sharma,Endocrinologist,9867654321,Hadapsar,Pune,10 AM - 3 PM,4.7,72
+Manipal Hospital,Dr. Prashant Patil,Psychiatrist,9898777766,Pimpri,Pimpri-Chinchwad,8 AM - 1 PM,4.4,66
+Jehangir Hospital,Dr. Sonali Patil,Obstetrician,9834234567,Shivaji Nagar,Pune,10 AM - 2 PM,4.6,68
+Noble Hospital,Dr. Amit Bhardwaj,Plastic Surgeon,9834567876,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.5,60
+Deenanath Mangeshkar Hospital,Dr. Rekha Desai,Urologist,9812345790,Karve Nagar,Pune,9 AM - 2 PM,4.6,69
+Columbia Asia Hospital,Dr. Kiran Agarwal,Neuro Surgeon,9898998877,Chinchwad,Pimpri-Chinchwad,10 AM - 3 PM,4.7,71
+Inamdar Hospital,Dr. Rajesh Kumar,Gastroenterologist,9922334455,Pune Camp,Pune,9 AM - 1 PM,4.5,75
+Lokmanya Hospital,Dr. Pramod Rathi,Rheumatologist,9887654322,Pune,Pune,9 AM - 2 PM,4.4,62
+Ruby Hall Clinic,Dr. Swati Deshmukh,Ophthalmologist,9882334455,Camp,Pune,10 AM - 2 PM,4.6,72
+Aditya Birla Hospital,Dr. Vijay Soni,ENT Specialist,9854332211,MIDC,Pimpri-Chinchwad,9 AM - 1 PM,4.5,67
+Sahyadri Hospital,Dr. Neeraj Gupta,Orthopedic Surgeon,9898776677,Hadapsar,Pune,9 AM - 1 PM,4.7,69
+Manipal Hospital,Dr. Sandeep Patil,Urologist,9867771234,Chinchwad,Pimpri-Chinchwad,9 AM - 3 PM,4.4,64
+Jehangir Hospital,Dr. Meenal Joshi,Cardiologist,9856443322,Sangamwadi,Pune,10 AM - 2 PM,4.6,70
+Noble Hospital,Dr. Arun Nair,Pediatrician,9884332211,Chinchwad,Pimpri-Chinchwad,9 AM - 12 PM,4.4,65
+Deenanath Mangeshkar Hospital,Dr. Sunita Kumar,Nephrologist,9833445567,Pune,Pune,8 AM - 2 PM,4.7,73
+Columbia Asia Hospital,Dr. Varun Shetty,Physiotherapist,9888554433,Pimpri,Pimpri-Chinchwad,9 AM - 1 PM,4.6,71
+Inamdar Hospital,Dr. Neha Rathi,Pulmonologist,9876345678,Mundhwa,Pune,10 AM - 3 PM,4.5,68
+Lokmanya Hospital,Dr. Abhishek Jadhav,Plastic Surgeon,9812334556,Wakad,Pimpri-Chinchwad,9 AM - 2 PM,4.4,66
+Ruby Hall Clinic,Dr. Pradeep Patil,Cardiothoracic Surgeon,9867554333,Pune Camp,Pune,9 AM - 1 PM,4.7,74
+Aditya Birla Hospital,Dr. Manju Mishra,General Physician,9822334455,Moshi,Pimpri-Chinchwad,10 AM - 1 PM,4.6,65
+Sahyadri Hospital,Dr. Sandeep Agrawal,Neuro Surgeon,9876543321,Hadapsar,Pune,9 AM - 2 PM,4.5,70
+Manipal Hospital,Dr. Simran Gupta,Obstetrician,9876543333,Chinchwad,Pimpri-Chinchwad,8 AM - 1 PM,4.6,69
+Jehangir Hospital,Dr. Ritu Joshi,Dermatologist,9888776655,Shivaji Nagar,Pune,9 AM - 2 PM,4.4,62
+Noble Hospital,Dr. Prakash Patil,General Surgeon,9865432211,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.6,67
+Deenanath Mangeshkar Hospital,Dr. Priya Deshmukh,Gastroenterologist,9812345678,Kothrud,Pune,10 AM - 3 PM,4.7,75
+Columbia Asia Hospital,Dr. Sunil Patel,Neurologist,9876541234,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.5,69
+Inamdar Hospital,Dr. Shubham Verma,Pediatric Cardiologist,9834567890,Mundhwa,Pune,10 AM - 2 PM,4.6,72
+Lokmanya Hospital,Dr. Neelam Shinde,Endocrinologist,9854332212,Pune,Pune,9 AM - 1 PM,4.4,64
+Ruby Hall Clinic,Dr. Arvind Joshi,Pulmonologist,9898771122,Shivajinagar,Pune,10 AM - 3 PM,4.7,75
+Aditya Birla Hospital,Dr. Kiran Jadhav,Urologist,9865442211,Moshi,Pimpri-Chinchwad,9 AM - 1 PM,4.6,69
+Sahyadri Hospital,Dr. Shailendra Rathi,General Surgeon,9857443322,Hadapsar,Pune,9 AM - 3 PM,4.5,72
+Manipal Hospital,Dr. Vishal Agrawal,Gastroenterologist,9876554321,Chinchwad,Pimpri-Chinchwad,10 AM - 2 PM,4.4,68
+Jehangir Hospital,Dr. Rohit Deshmukh,Orthopedic Surgeon,9867321445,Camp,Pune,9 AM - 1 PM,4.6,70
+Noble Hospital,Dr. Madhavi Deshmukh,Obstetrician,9856442211,Pimpri,Pimpri-Chinchwad,10 AM - 3 PM,4.5,66
+Deenanath Mangeshkar Hospital,Dr. Aishwarya Soni,Cardiologist,9876543211,Kothrud,Pune,9 AM - 2 PM,4.7,74
+Columbia Asia Hospital,Dr. Vikram Verma,Nephrologist,9856445566,Pimpri,Pimpri-Chinchwad,10 AM - 1 PM,4.6,69
+Inamdar Hospital,Dr. Neelam Agrawal,Plastic Surgeon,9865432233,Hadapsar,Pune,9 AM - 1 PM,4.4,65
+Lokmanya Hospital,Dr. Rajesh Gupta,ENT Specialist,9876654321,Wakad,Pimpri-Chinchwad,10 AM - 2 PM,4.5,67
+Ruby Hall Clinic,Dr. Sandeep Rathi,Neurologist,9888771123,Pune Camp,Pune,9 AM - 3 PM,4.7,74
+Aditya Birla Hospital,Dr. Vandana Patil,General Physician,9876554433,MIDC,Pimpri-Chinchwad,9 AM - 12 PM,4.6,70
+Sahyadri Hospital,Dr. Harish Sharma,Pediatrician,9857323444,Mundhwa,Pune,10 AM - 2 PM,4.6,68
+Manipal Hospital,Dr. Gaurav Shah,Oncologist,9888774433,Chinchwad,Pimpri-Chinchwad,9 AM - 1 PM,4.4,71
+Jehangir Hospital,Dr. Rupal Soni,Pulmonologist,9856332222,Sangamwadi,Pune,10 AM - 2 PM,4.7,72
+Noble Hospital,Dr. Pradeep Soni,Neuro Surgeon,9886554433,Chinchwad,Pimpri-Chinchwad,9 AM - 3 PM,4.5,70
+Deenanath Mangeshkar Hospital,Dr. Sushant Soni,Cardiothoracic Surgeon,9867776644,Pune,Pune,9 AM - 1 PM,4.6,75
+Columbia Asia Hospital,Dr. Neha Verma,Orthopedic Surgeon,9887443322,Pimpri,Pimpri-Chinchwad,9 AM - 1 PM,4.4,68
+Inamdar Hospital,Dr. Harish Mehta,ENT Specialist,9877776543,Mundhwa,Pune,9 AM - 2 PM,4.6,69
+Lokmanya Hospital,Dr. Aarti Rathi,Dermatologist,9886334433,Pimpri,Pimpri-Chinchwad,10 AM - 1 PM,4.5,65

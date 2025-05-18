@@ -1,0 +1,76 @@
+BEGIN
+    LOAD 'cleaned_disease_dataset.csv' INTO DataFrame
+    SPLIT DataFrame INTO Features (Symptoms) and Target (Disease)
+
+    ENCODE categorical Features using Label Encoding
+    STORE label encoders as 'label_encoders.pkl'
+
+    SPLIT dataset INTO Training Set and Test Set (80-20 Split)
+
+    INITIALIZE Random Forest Model
+    TRAIN model on Training Set
+    STORE trained model as 'rf_model.pkl'
+
+    INITIALIZE Decision Tree Model
+    TRAIN model on Training Set
+    STORE trained model as 'dt_model.pkl'
+
+    INITIALIZE SVM Model
+    TRAIN model on Training Set
+    STORE trained model as 'svm_model.pkl'
+
+    PRINT "Model Training Completed"
+END
+
+
+BEGIN
+    IMPORT Flask, Pandas, Pickle
+
+    LOAD 'label_encoders.pkl'
+    LOAD 'rf_model.pkl'
+    LOAD 'dt_model.pkl'
+    LOAD 'svm_model.pkl'
+    LOAD 'cleaned_disease_dataset.csv' FOR remedies and doctor suggestions
+
+    INITIALIZE Flask Application
+
+    DEFINE ROUTE ('/') TO LOAD 'index.html'
+
+    DEFINE ROUTE ('/predict') TO HANDLE FORM SUBMISSION:
+        RECEIVE Selected Symptoms
+        ENCODE Symptoms using 'label_encoders.pkl'
+        RESHAPE Data for Model Prediction
+
+        RUN Random Forest Model to PREDICT Disease
+        RETRIEVE Remedies and Doctor Suggestions FROM 'cleaned_disease_dataset.csv'
+
+        RETURN 'result.html' WITH Disease Name, Remedies, and Doctor Suggestions
+
+    RUN Flask App on PORT 5000
+END
+
+
+BEGIN
+    CREATE 'index.html' with:
+        DROPDOWN List for Symptoms
+        "+" Button to ADD More Symptoms
+        "Predict" Button to Submit Form
+
+    CREATE 'result.html' with:
+        DISPLAY Predicted Disease
+        DISPLAY Remedies and Doctor Suggestions
+        "Back" Button to Return to Home
+
+    USE 'styles.css' for UI Styling
+END
+
+
+
+BEGIN
+    START Flask Server
+    USER selects Symptoms and Clicks "Predict"
+    SYSTEM Encodes Inputs and Runs Model
+    SYSTEM Retrieves and Displays Disease Prediction & Remedies
+    USER views the Report and Returns Home if Needed
+END
+

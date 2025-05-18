@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MED+⚕️</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="header text-center">
+            <h2 class="text-white">Welcome to MED+⚕️</h2>
+            <p class="text-white">Select the symptoms to get a medical diagnosis.</p>
+        </div>
+        <p>⚕️Your health is your <strong>greatest wealth</strong>. Let’s take care of it ❤️!!</p>
+        <p>🔬Every symptom tells a story. Let’s find yours! <strong>:)</strong></p>
+        <button id="toggle-btn" class="plus-btn">+</button>
+
+        <div class="symptom-boxes mt-4">
+            <form action="{{ url_for('predict_disease') }}" method="POST">
+                <div class="row">
+                    {% for symptom in symptoms %}
+                        <div class="col-md-3 mb-3">
+                            <div class="card symptom-box">
+                                <div class="card-body text-center">
+                                    <input type="checkbox" name="symptoms" value="{{ symptom }}" class="form-check-input hidden-checkbox">
+                                    <label class="form-check-label">{{ symptom }}</label>
+                                    <span class="tick-mark">✅</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" id="age" name="age">
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="gender" name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lifestyle">Lifestyle Factors</label>
+                    <select class="form-control" id="lifestyle" name="lifestyle">
+                        <option value="Sedentary">Sedentary</option>
+                        <option value="Active">Active</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mt-4">Predict Disease 🩺</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".symptom-boxes").hide();
+
+            $("#toggle-btn").click(function(){
+                $(".symptom-boxes").slideToggle(500);
+            });
+
+            $(".symptom-box").click(function(){
+                let checkbox = $(this).find(".hidden-checkbox");
+                checkbox.prop("checked", !checkbox.prop("checked"));
+                $(this).toggleClass("selected");
+                $(this).find(".tick-mark").toggleClass("visible");
+            });
+        });
+    </script>
+</body>
+</html>
