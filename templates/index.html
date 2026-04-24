@@ -3,77 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MED+⚕️</title>
+    <title>MED+ Clinical Assessment</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="header text-center">
-            <h2 class="text-white">Welcome to MED+⚕️</h2>
-            <p class="text-white">Select the symptoms to get a medical diagnosis.</p>
-        </div>
-        <p>⚕️Your health is your <strong>greatest wealth</strong>. Let’s take care of it ❤️!!</p>
-        <p>🔬Every symptom tells a story. Let’s find yours! <strong>:)</strong></p>
-        <button id="toggle-btn" class="plus-btn">+</button>
+    <main class="app-shell">
+        <section class="intake-panel">
+            <div class="brand-row">
+                <div>
+                    <p class="eyebrow">Preliminary health assessment</p>
+                    <h1>MED+</h1>
+                </div>
+                <span class="status-pill">Clinical preview</span>
+            </div>
 
-        <div class="symptom-boxes mt-4">
-            <form action="{{ url_for('predict_disease') }}" method="POST">
-                <div class="row">
-                    {% for symptom in symptoms %}
-                        <div class="col-md-3 mb-3">
-                            <div class="card symptom-box">
-                                <div class="card-body text-center">
-                                    <input type="checkbox" name="symptoms" value="{{ symptom }}" class="form-check-input hidden-checkbox">
-                                    <label class="form-check-label">{{ symptom }}</label>
-                                    <span class="tick-mark">✅</span>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
+            <form action="{{ url_for('predict_disease') }}" method="POST" id="assessment-form" class="assessment-form">
+                <div class="field-group">
+                    <label for="symptom-search">Symptoms</label>
+                    <div class="symptom-search">
+                        <input
+                            id="symptom-search"
+                            type="search"
+                            class="form-control"
+                            placeholder="Search symptoms, then press Enter"
+                            autocomplete="off"
+                            list="symptom-options"
+                        >
+                        <button type="button" id="add-symptom" class="btn btn-primary">Add</button>
+                    </div>
+                    <datalist id="symptom-options">
+                        {% for symptom in symptoms %}
+                            <option value="{{ symptom }}"></option>
+                        {% endfor %}
+                    </datalist>
+                    <div id="selected-symptoms" class="chip-list" aria-live="polite"></div>
+                    <div id="symptom-inputs"></div>
                 </div>
 
-                <div class="form-group">
-                    <label for="age">Age</label>
-                    <input type="number" class="form-control" id="age" name="age">
+                <div class="form-grid">
+                    <div class="field-group">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control" id="age" name="age" min="1" max="120" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="gender">Gender</label>
+                        <select class="form-control" id="gender" name="gender" required>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Other">Other / Prefer not to say</option>
+                        </select>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="lifestyle">Lifestyle</label>
+                        <select class="form-control" id="lifestyle" name="lifestyle" required>
+                            <option value="Active">Active</option>
+                            <option value="Sedentary">Sedentary</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select class="form-control" id="gender" name="gender">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
+                <div class="disclaimer-box">
+                    This is a preliminary analysis, not a medical diagnosis. Seek medical care for severe or worsening symptoms.
                 </div>
 
-                <div class="form-group">
-                    <label for="lifestyle">Lifestyle Factors</label>
-                    <select class="form-control" id="lifestyle" name="lifestyle">
-                        <option value="Sedentary">Sedentary</option>
-                        <option value="Active">Active</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-block mt-4">Predict Disease 🩺</button>
+                <button type="submit" class="submit-button">
+                    Generate assessment
+                </button>
             </form>
-        </div>
-    </div>
+        </section>
+
+        <aside class="insight-panel">
+            <p class="eyebrow">Model status</p>
+            <h2>Ranked differential output</h2>
+            <div class="metric-grid">
+                <div>
+                    <span>{{ metrics.rows or "N/A" }}</span>
+                    <small>training rows</small>
+                </div>
+                <div>
+                    <span>{{ metrics.diseases or "N/A" }}</span>
+                    <small>conditions</small>
+                </div>
+                <div>
+                    <span>{{ metrics.model or "ML" }}</span>
+                    <small>active model</small>
+                </div>
+            </div>
+            <p class="panel-note">
+                Results are ranked by model probability and explained using matched symptoms from the training profile.
+            </p>
+        </aside>
+    </main>
 
     <script>
-        $(document).ready(function(){
-            $(".symptom-boxes").hide();
+        const allSymptoms = {{ symptoms|tojson }};
+        const selected = new Set();
+        const searchInput = document.getElementById("symptom-search");
+        const chipList = document.getElementById("selected-symptoms");
+        const hiddenInputs = document.getElementById("symptom-inputs");
+        const addButton = document.getElementById("add-symptom");
+        const form = document.getElementById("assessment-form");
 
-            $("#toggle-btn").click(function(){
-                $(".symptom-boxes").slideToggle(500);
-            });
+        function normalize(value) {
+            return value.trim().toLowerCase().replace(/\s+/g, " ");
+        }
 
-            $(".symptom-box").click(function(){
-                let checkbox = $(this).find(".hidden-checkbox");
-                checkbox.prop("checked", !checkbox.prop("checked"));
-                $(this).toggleClass("selected");
-                $(this).find(".tick-mark").toggleClass("visible");
+        function renderSymptoms() {
+            chipList.innerHTML = "";
+            hiddenInputs.innerHTML = "";
+            Array.from(selected).sort().forEach((symptom) => {
+                const chip = document.createElement("button");
+                chip.type = "button";
+                chip.className = "symptom-chip";
+                chip.textContent = symptom + " x";
+                chip.addEventListener("click", () => {
+                    selected.delete(symptom);
+                    renderSymptoms();
+                });
+                chipList.appendChild(chip);
+
+                const input = document.createElement("input");
+                input.type = "hidden";
+                input.name = "symptoms";
+                input.value = symptom;
+                hiddenInputs.appendChild(input);
             });
+        }
+
+        function addSymptom() {
+            const typed = normalize(searchInput.value);
+            if (!typed) {
+                return;
+            }
+            const matched = allSymptoms.find((symptom) => normalize(symptom) === typed) || typed;
+            selected.add(matched);
+            searchInput.value = "";
+            renderSymptoms();
+        }
+
+        addButton.addEventListener("click", addSymptom);
+        searchInput.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                addSymptom();
+            }
+        });
+        form.addEventListener("submit", (event) => {
+            if (selected.size === 0) {
+                event.preventDefault();
+                searchInput.focus();
+                searchInput.classList.add("input-warning");
+            }
         });
     </script>
 </body>

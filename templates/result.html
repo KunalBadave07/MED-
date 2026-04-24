@@ -3,35 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnosis Report</title>
+    <title>MED+ Preliminary Report</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body class="result-body">
-    <div class="container mt-5">
-        <div class="report-container">
-            <div class="report-header">
-                🏥 Medical Diagnosis Report 🏥
-            </div>
-            <div class="report-content">
-                <p><strong>Selected Symptoms:</strong></p>
-                <ul>
-                    {% for symptom in result.symptoms %}
-                        <li>{{ symptom }}</li>
+    <main class="report-shell">
+        <section class="report-sheet">
+            <header class="report-title">
+                <div>
+                    <p class="eyebrow">MED+ preliminary assessment</p>
+                    <h1>Clinical Summary Report</h1>
+                </div>
+                <div class="report-id">Preliminary</div>
+            </header>
+
+            {% if result.red_flags %}
+                <div class="alert-panel urgent">
+                    <strong>Urgent review suggested</strong>
+                    {% for alert in result.red_flags %}
+                        <p>{{ alert.message }}</p>
                     {% endfor %}
-                </ul>
-                <p><strong>Predicted Disease🩺:</strong> {{ result.disease }}</p>
-                <p><strong>Confidence Level:</strong> {{ result.probability }}%</p>
-                <p><strong>Recommended Home Remedies 💊:</strong> {{ result.remedy }}</p>
-                <p><strong>Doctor's Suggestion 🧑‍⚕️:</strong>
-                    <a href="{{ url_for('show_doctors', specialization=result.doctor|lower|replace(' ', '') ) }}" class="btn btn-info">
-                        {{ result.doctor }}
-                    </a>
-                </p>
+                </div>
+            {% endif %}
+
+            {% if result.low_confidence %}
+                <div class="alert-panel">
+                    The leading result has low confidence. Please treat this as a broad screening result and consult a clinician.
+                </div>
+            {% endif %}
+
+            <div class="report-grid">
+                <section>
+                    <h2>Patient Details</h2>
+                    <dl class="detail-list">
+                        <div><dt>Age</dt><dd>{{ result.patient.age }}</dd></div>
+                        <div><dt>Gender</dt><dd>{{ result.patient.gender }}</dd></div>
+                        <div><dt>Lifestyle</dt><dd>{{ result.patient.lifestyle }}</dd></div>
+                    </dl>
+                </section>
+
+                <section>
+                    <h2>Reported Symptoms</h2>
+                    <div class="chip-list compact">
+                        {% for symptom in result.symptoms %}
+                            <span class="symptom-chip static">{{ symptom }}</span>
+                        {% endfor %}
+                    </div>
+                </section>
             </div>
-        </div>
-        <p>Medicine can heal the body, but <strong>love, faith, and resilience heal the soul.</strong> No matter what lies ahead, know that you are strong!</p>
-        <button onclick="history.back()" class="btn btn-secondary">Back</button>
-    </div>
+
+            <section class="primary-diagnosis">
+                <p class="eyebrow">Most probable condition</p>
+                <div class="diagnosis-row">
+                    <h2>{{ result.primary.disease }}</h2>
+                    <span class="confidence-badge">{{ result.primary.confidence }}% {{ result.primary.confidence_band }}</span>
+                </div>
+                <p>
+                    Recommended specialist:
+                    <a href="{{ url_for('show_doctors', specialization=result.primary.doctor_slug) }}">{{ result.primary.doctor }}</a>
+                </p>
+            </section>
+
+            <section>
+                <h2>Differential Ranking</h2>
+                <div class="prediction-list">
+                    {% for prediction in result.predictions %}
+                        <article class="prediction-card">
+                            <div class="prediction-head">
+                                <div>
+                                    <span class="rank">#{{ prediction.rank }}</span>
+                                    <h3>{{ prediction.disease }}</h3>
+                                </div>
+                                <span class="confidence-badge">{{ prediction.confidence }}%</span>
+                            </div>
+
+                            <div class="evidence-grid">
+                                <div>
+                                    <h4>Supporting symptoms</h4>
+                                    {% if prediction.matched_symptoms %}
+                                        <ul>
+                                            {% for symptom in prediction.matched_symptoms %}
+                                                <li>{{ symptom }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% else %}
+                                        <p>No high-profile symptom match in the local dataset.</p>
+                                    {% endif %}
+                                </div>
+                                <div>
+                                    <h4>Common but not reported</h4>
+                                    {% if prediction.missing_common_symptoms %}
+                                        <ul>
+                                            {% for symptom in prediction.missing_common_symptoms %}
+                                                <li>{{ symptom }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% else %}
+                                        <p>No major missing symptoms in this profile.</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            {% if loop.first %}
+                                <div class="care-note">
+                                    <strong>Temporary care note:</strong> {{ prediction.remedy }}
+                                </div>
+                            {% endif %}
+                        </article>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <footer class="report-footer">
+                <p>This is a preliminary analysis, not a medical diagnosis. Consult a licensed doctor for diagnosis, treatment, or medication decisions.</p>
+                <button onclick="history.back()" class="btn btn-secondary">Back</button>
+            </footer>
+        </section>
+    </main>
 </body>
 </html>
